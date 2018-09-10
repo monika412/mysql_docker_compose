@@ -9,10 +9,9 @@ RUN apk update \
   && apk add --no-cache subversion \
   && apk add curl bash binutils tar git \
   && python3 -m ensurepip \
-  && git clone https://github.com/monika412/Mysql_Api /Mysql_Api \
+  && git clone https://github.com/monika412/mysql_docker_compose.git /Mysql_Api \
   && pip3 install -r /Mysql_Api/requirements.txt 	
 
 
 
 CMD cd /Mysql_Api && git pull && python3 /Mysql_Api/mysql_api1.py
-
