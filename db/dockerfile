@@ -2,7 +2,8 @@ FROM mysql:5.7
 
 RUN mkdir /tmp/scripts
 
-RUN cd /tmp/scripts && git clone https://github.com/monika412/mysql_docker_compose.git
+RUN cd /tmp/scripts
+RUN git clone https://github.com/monika412/mysql_docker_compose.git
 
 RUN chmod +x /tmp/scripts/db/createdb.sh
 
