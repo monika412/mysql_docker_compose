@@ -7,7 +7,7 @@ RUN mkdir /tmp/scripts
 
 RUN cd /tmp/scripts
 
-COPY createdb.sh /tmp/scripts/createdb.sh
+ADD createdb.sh /tmp/scripts/createdb.sh
 #RUN git clone https://github.com/monika412/mysql_docker_compose
 
 RUN chmod +x /tmp/scripts/createdb.sh
