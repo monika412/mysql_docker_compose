@@ -1,0 +1,9 @@
+FROM mysql:5.7
+
+RUN mkdir /tmp/scripts
+
+RUN cd /tmp/scripts && git clone https://github.com/monika412/Mysql_Api
+
+RUN chmod +x /tmp/scripts/db/init.sql
+
+ENTRYPOINT /bin/sh /tmp/scripts/db/init.sql
