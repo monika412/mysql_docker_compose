@@ -20,7 +20,7 @@ def time_zone() -> List[Dict]:
     results = [{Time_zone_id: Use_leap_seconds} for (Time_zone_id, Use_leap_seconds) in cursor]
     cursor.close()
     connection.close()
-
+    print (results)
     return results
 
 
