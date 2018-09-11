@@ -14,4 +14,6 @@ RUN apk update \
 
 
 
-CMD cd /Mysql_Api && git pull && python3 /Mysql_Api/mysql_api1.py
+#CMD cd /Mysql_Api && git pull && python3 /Mysql_Api/mysql_api1.py
+
+CMD cd /Mysql_Api && git pull && python3 /Mysql_Api/mysqlapp.py
