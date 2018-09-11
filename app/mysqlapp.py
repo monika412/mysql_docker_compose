@@ -25,7 +25,7 @@ def all_users() -> List[Dict]:
     results=[dict(zip(headers,val)) for val in results_val]
     
     print (results)
-    return results
+    return jsonify(results)
 
 
 @app.route('/')
