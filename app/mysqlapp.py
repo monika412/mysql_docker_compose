@@ -17,12 +17,15 @@ def all_users() -> Dict:
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor()
     cursor.execute('SELECT party_id,fresco13_seg,fresco13_sseg,fresco13_mseg,match_flag FROM customer_segments')
-    results = cursor.fetchall()
+    results_val = cursor.fetchall()
     
     cursor.close()
     connection.close()
+    headers=['party_id','fresco13_seg','fresco13_sseg','fresco13_mseg','match_flag']
+    results=[dict(zip(headers,val)) for val in results_val]
+    
     print (results)
-    return jsonify(results)
+    return results
 
 
 @app.route('/')
