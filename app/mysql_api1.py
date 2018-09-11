@@ -10,7 +10,7 @@ def time_zone() -> List[Dict]:
     config = {
         'user': 'root',
         'password': 'root',
-        'host': 'db',
+        'host': 'db-mysql',
         'port': '3306',
         'database': 'mysql'
     }
@@ -30,4 +30,5 @@ def index() -> str:
 
 
 if __name__ == '__main__':
+    print ("in main")
     app.run(host='0.0.0.0')
