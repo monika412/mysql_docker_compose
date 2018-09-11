@@ -26,7 +26,7 @@ def all_users() -> List[Dict]:
 
 @app.route('/')
 def index() -> str:
-    return json.dumps({'customers': all_users()})
+    return jsonify({'customers': all_users()})
 
 
 if __name__ == '__main__':
