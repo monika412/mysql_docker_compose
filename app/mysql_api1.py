@@ -31,4 +31,4 @@ def index() -> str:
 
 if __name__ == '__main__':
     print ("in main")
-    app.run()
+    app.run(debug=True)
