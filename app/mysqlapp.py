@@ -1,5 +1,5 @@
 from typing import List, Dict
-from flask import Flask
+from flask import Flask, jsonify
 import mysql.connector
 import json
 
@@ -21,7 +21,7 @@ def all_users() -> List[Dict]:
     cursor.close()
     connection.close()
     print (results)
-    return json.dumps(results)
+    return jsonify(results)
 
 
 @app.route('/')
