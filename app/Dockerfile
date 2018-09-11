@@ -10,10 +10,10 @@ RUN apk update \
   && apk add curl bash binutils tar git \
   && python3 -m ensurepip \
   && git clone https://github.com/monika412/mysql_docker_compose.git /Mysql_Api \
-  && pip3 install -r /Mysql_Api/requirements.txt 	
+  && pip3 install -r /Mysql_Api/app/requirements.txt 	
 
 
 
 #CMD cd /Mysql_Api && git pull && python3 /Mysql_Api/mysql_api1.py
 
-CMD cd /Mysql_Api && git pull && python3 /Mysql_Api/mysqlapp.py
+CMD cd /Mysql_Api && git pull && python3 /Mysql_Api/app/mysqlapp.py
