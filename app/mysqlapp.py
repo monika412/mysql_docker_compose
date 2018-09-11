@@ -17,8 +17,8 @@ def all_users() -> Dict:
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor()
     cursor.execute('SELECT party_id,fresco13_seg,fresco13_sseg,fresco13_mseg,match_flag FROM customer_segments')
-    results_values = cursor.fetchall()
-    for val in results_values
+    results = cursor.fetchall()
+    
     cursor.close()
     connection.close()
     print (results)
