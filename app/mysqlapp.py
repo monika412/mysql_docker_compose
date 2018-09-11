@@ -21,7 +21,7 @@ def all_users() -> List[Dict]:
     cursor.close()
     connection.close()
     print (results)
-    return results
+    return json.dumps(results)
 
 
 @app.route('/')
