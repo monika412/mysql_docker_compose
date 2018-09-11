@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 
 
-def all_users() -> List[Dict]:
+def all_users() -> Dict:
     config = {
         'user': 'root',
         'password': 'root',
@@ -17,7 +17,8 @@ def all_users() -> List[Dict]:
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor()
     cursor.execute('SELECT party_id,fresco13_seg,fresco13_sseg,fresco13_mseg,match_flag FROM customer_segments')
-    results = cursor.fetchall()
+    results_values = cursor.fetchall()
+    for val in results_values
     cursor.close()
     connection.close()
     print (results)
