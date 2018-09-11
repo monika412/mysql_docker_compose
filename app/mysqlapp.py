@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 
 
-def all_users() -> Dict:
+def all_users() -> List[Dict]:
     config = {
         'user': 'root',
         'password': 'root',
