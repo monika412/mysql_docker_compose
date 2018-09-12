@@ -10,7 +10,7 @@ def all_users() -> List[Dict]:
     config = {
         'user': 'root',
         'password': 'root',
-        'host': 'db-mysql',
+        'host': 'mysql_db_1',
         'port': '3306',
         'database': 'fresco_segment'
     }
